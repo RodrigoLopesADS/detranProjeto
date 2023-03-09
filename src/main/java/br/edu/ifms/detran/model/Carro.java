@@ -5,11 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
 
 
@@ -31,6 +33,9 @@ public class Carro implements Serializable {
 	@OneToMany(mappedBy = "carro")
 	private List<Multa> multas = new ArrayList<Multa>();
 	
+	@OneToOne(cascade = CascadeType.ALL ,mappedBy = "carro")
+	private Apolice apolice;
+	
 	
 	public Carro() {
 		super();
@@ -38,7 +43,7 @@ public class Carro implements Serializable {
 	}
 
 
-	public Carro(Long id, String nome, String marca, int modelo, String placa, String cor) {
+	public Carro(Long id, String nome, String marca, int modelo, String placa, String cor, Apolice apolice) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -46,11 +51,25 @@ public class Carro implements Serializable {
 		this.modelo = modelo;
 		this.placa = placa;
 		this.cor = cor;
+		this.apolice = apolice;
 	}
 
 
+
 	
-	
+
+
+
+	public Apolice getApolice() {
+		return apolice;
+	}
+
+
+	public void setApolice(Apolice apolice) {
+		this.apolice = apolice;
+	}
+
+
 	public List<Multa> getMultas() {
 		return multas;
 	}
