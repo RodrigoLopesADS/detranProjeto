@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.edu.ifms.detran.dto.ApoliceDto;
 import br.edu.ifms.detran.model.Apolice;
 import br.edu.ifms.detran.repository.RepositoryApolice;
 
@@ -39,25 +40,30 @@ public class ApoliceService {
 		
 	}
 	
-	/*
+	
 	
 	
 	public Apolice atualizar(Apolice apolice) {
 		Apolice apoliceNova = buscarId(apolice.getId());
 		
-		apoliceNova.setCidade(multa.getCidade());
-		multaNova.setAno(multa.getAno());
+		apoliceNova.setValor(apolice.getValor());
+		apoliceNova.setCobertura(apolice.getCobertura());
+		apoliceNova.setVigencia(apolice.getVigencia());
 		
-		return repositoryMulta.save(multaNova);
+		return repositoryApolice.save(apoliceNova);
 		
 	}
 
-	public Multa fromDto(MultaDto multaDto) {
-		return new Multa(multaDto.getId(), multaDto.getCidade(), multaDto.getAno(), null, null);
+	public Apolice fromDto(ApoliceDto apoliceDto) {
+		return new Apolice(apoliceDto.getId(), apoliceDto.getValor(), apoliceDto.getCobertura(), apoliceDto.getVigencia(), null);
+		
+				
+				
+		
 		
 	}
 	
-	*/
+	
 	
 
 }
