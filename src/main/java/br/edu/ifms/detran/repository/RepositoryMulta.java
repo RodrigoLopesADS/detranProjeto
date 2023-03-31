@@ -7,6 +7,6 @@ import br.edu.ifms.detran.model.Multa;
 
 
 @Repository
-public interface RepositoryMulta extends JpaRepository<Multa, Long>{
+public interface RepositoryMulta extends JpaRepository<Multa, Integer>{
 
 }

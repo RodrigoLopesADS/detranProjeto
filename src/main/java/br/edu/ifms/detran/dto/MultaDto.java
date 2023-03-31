@@ -4,7 +4,7 @@ import br.edu.ifms.detran.model.Multa;
 
 public class MultaDto {
 	
-	private Long id;
+	private Integer id;
 	private String cidade;;
 	private int ano;
 	
@@ -22,12 +22,12 @@ public class MultaDto {
 	}
 
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

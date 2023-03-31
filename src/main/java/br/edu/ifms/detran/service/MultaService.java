@@ -22,7 +22,7 @@ public class MultaService {
 		
 	}
 	
-	public Multa buscarId(Long id) {
+	public Multa buscarId(Integer id) {
 		Optional<Multa> multa = repositoryMulta.findById(id);
 		return multa.orElseThrow();
 		
@@ -34,7 +34,7 @@ public class MultaService {
 		
 	}
 	
-	public void remover(Long id) {
+	public void remover(Integer id) {
 		buscarId(id);
 		repositoryMulta.deleteById(id);
 		

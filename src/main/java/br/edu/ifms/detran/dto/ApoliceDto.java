@@ -4,7 +4,7 @@ import br.edu.ifms.detran.model.Apolice;
 
 public class ApoliceDto {
 
-	private Long id;
+	private Integer id;
 	private float valor;
 	private String cobertura;
 	private String vigencia;
@@ -27,13 +27,13 @@ public class ApoliceDto {
 
 
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
 
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

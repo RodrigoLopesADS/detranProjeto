@@ -22,7 +22,7 @@ public class ApoliceService {
 		
 	}
 	
-	public Apolice buscarId(Long id) {
+	public Apolice buscarId(Integer id) {
 		Optional<Apolice> apolice = repositoryApolice.findById(id);
 		return apolice.orElseThrow();
 		
@@ -34,7 +34,7 @@ public class ApoliceService {
 		
 	}
 	
-	public void remover(Long id) {
+	public void remover(Integer id) {
 		buscarId(id);
 		repositoryApolice.deleteById(id);
 		

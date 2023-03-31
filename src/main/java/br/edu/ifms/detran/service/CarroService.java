@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import br.edu.ifms.detran.dto.CarroDto;
 import br.edu.ifms.detran.model.Carro;
 import br.edu.ifms.detran.repository.RepositoryCarro;
+import br.edu.ifms.detran.service.exception.ObjectNotFoundException;
 
 @Service
 public class CarroService {
@@ -22,9 +23,10 @@ public class CarroService {
 		
 	}
 	
-	public Carro buscarId(Long id) {
+	public Carro buscarId(Integer id) {
 		Optional<Carro> carro = repositoryCarro.findById(id);
-		return carro.orElseThrow();
+		return carro.orElseThrow(() -> new ObjectNotFoundException( 
+				 "Objeto não encontrado! Id: " + id + ", Tipo: " + Carro.class.getName()));
 		
 	}
 	
@@ -34,7 +36,7 @@ public class CarroService {
 		
 	}
 	
-	public void remover(Long id) {
+	public void remover(Integer id) {
 		buscarId(id);
 		repositoryCarro.deleteById(id);
 		

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import br.edu.ifms.detran.model.Apolice;
 
 @Repository
-public interface RepositoryApolice extends JpaRepository<Apolice, Long> {
+public interface RepositoryApolice extends JpaRepository<Apolice, Integer> {
 
 	
 	

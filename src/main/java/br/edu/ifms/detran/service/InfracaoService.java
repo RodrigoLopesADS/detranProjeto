@@ -23,7 +23,7 @@ public class InfracaoService {
 		
 	}
 	
-	public Infracao buscarId(Long id) {
+	public Infracao buscarId(Integer id) {
 		Optional<Infracao> infracao = repositoryInfracao.findById(id);
 		return infracao.orElseThrow();
 		
@@ -35,7 +35,7 @@ public class InfracaoService {
 		
 	}
 	
-	public void remover(Long id) {
+	public void remover(Integer id) {
 		buscarId(id);
 		repositoryInfracao.deleteById(id);
 		

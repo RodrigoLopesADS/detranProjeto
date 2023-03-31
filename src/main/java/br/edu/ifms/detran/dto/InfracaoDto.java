@@ -4,7 +4,7 @@ import br.edu.ifms.detran.model.Infracao;
 
 public class InfracaoDto {
 	
-	private Long id;
+	private Integer id;
 	private String descricao;
 	private int pontos;
 	private float valor;
@@ -24,12 +24,12 @@ public class InfracaoDto {
 	}
 
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

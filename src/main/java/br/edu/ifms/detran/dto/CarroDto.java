@@ -4,7 +4,7 @@ import br.edu.ifms.detran.model.Carro;
 
 public class CarroDto {
 	
-	private Long id; 
+	private Integer id; 
 	private String nome;
 	private String marca;
 	private int modelo;
@@ -28,12 +28,12 @@ public class CarroDto {
 	}
 
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

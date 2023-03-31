@@ -7,6 +7,6 @@ import br.edu.ifms.detran.model.Infracao;
 
 
 @Repository
-public interface RepositoryInfracao extends JpaRepository<Infracao, Long>{
+public interface RepositoryInfracao extends JpaRepository<Infracao, Integer>{
 
 }

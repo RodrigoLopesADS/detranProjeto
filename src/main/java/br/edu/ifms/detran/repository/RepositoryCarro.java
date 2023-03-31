@@ -7,7 +7,7 @@ import br.edu.ifms.detran.model.Carro;
 
 
 @Repository
-public interface RepositoryCarro extends JpaRepository<Carro, Long> {
+public interface RepositoryCarro extends JpaRepository<Carro, Integer> {
 	
 
 }

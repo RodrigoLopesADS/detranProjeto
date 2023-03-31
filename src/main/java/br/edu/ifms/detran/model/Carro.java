@@ -23,7 +23,7 @@ public class Carro implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id; 
+	private Integer id; 
 	private String nome;
 	private String marca;
 	private int modelo;
@@ -43,7 +43,7 @@ public class Carro implements Serializable {
 	}
 
 
-	public Carro(Long id, String nome, String marca, int modelo, String placa, String cor, Apolice apolice) {
+	public Carro(Integer id, String nome, String marca, int modelo, String placa, String cor, Apolice apolice) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -90,12 +90,12 @@ public class Carro implements Serializable {
 	}
 
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

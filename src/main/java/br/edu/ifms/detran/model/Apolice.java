@@ -3,6 +3,8 @@ package br.edu.ifms.detran.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,11 +20,12 @@ public class Apolice implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 	private float valor;
 	private String cobertura;
 	private String vigencia;
 	
+	@JsonIgnore
 	@OneToOne
 	@JoinColumn(name = "carro_id")
 	@MapsId
@@ -32,7 +35,7 @@ public class Apolice implements Serializable{
 		
 	}
 
-	public Apolice(Long id, float valor, String cobertura, String vigencia, Carro carro) {
+	public Apolice(Integer id, float valor, String cobertura, String vigencia, Carro carro) {
 		super();
 		this.id = id;
 		this.valor = valor;
@@ -58,11 +61,11 @@ public class Apolice implements Serializable{
 		return Objects.equals(id, other.id);
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
