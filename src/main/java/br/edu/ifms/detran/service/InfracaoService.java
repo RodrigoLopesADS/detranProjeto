@@ -31,7 +31,7 @@ public class InfracaoService {
 	
 	public Infracao inserir(Infracao infracao) {
 		infracao.setId(null);
-		return repositoryInfracao.save(null);
+		return repositoryInfracao.save(infracao);
 		
 	}
 	

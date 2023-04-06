@@ -30,7 +30,7 @@ public class MultaService {
 	
 	public Multa inserir(Multa multa) {
 		multa.setId(null);
-		return repositoryMulta.save(null);
+		return repositoryMulta.save(multa);
 		
 	}
 	

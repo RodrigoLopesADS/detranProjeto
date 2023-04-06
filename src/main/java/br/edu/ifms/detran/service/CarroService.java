@@ -32,7 +32,7 @@ public class CarroService {
 	
 	public Carro inserir(Carro carro) {
 		carro.setId(null);
-		return repositoryCarro.save(null);
+		return repositoryCarro.save(carro);
 		
 	}
 	

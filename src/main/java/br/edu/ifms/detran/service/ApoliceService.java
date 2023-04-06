@@ -30,7 +30,7 @@ public class ApoliceService {
 	
 	public Apolice inserir(Apolice apolice) {
 		apolice.setId(null);
-		return repositoryApolice.save(null);
+		return repositoryApolice.save(apolice);
 		
 	}
 	
